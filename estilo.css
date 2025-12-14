@@ -1,0 +1,267 @@
+/* Estilos gerais da página */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos da navegação */
+
+.navbar {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.menu a {
+    color: white;
+    font-weight: 500;
+}
+
+.menu a:hover {
+    color: #3498db;
+    text-decoration: none;
+}
+
+/* Container e layout das seções */
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 3rem 0;
+    background-color: white;
+    margin: 2rem 0;
+    border-radius: 5px;
+}
+
+.section h2 {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+.section h3 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.section p {
+    color: #555;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.section ul {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.section ul li {
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+/* Estilos dos cards (formação e portfólio) */
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background-color: #ecf0f1;
+    padding: 1.5rem;
+    border-radius: 5px;
+    border-left: 4px solid #3498db;
+}
+
+.card h3 {
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+.card p {
+    color: #666;
+    margin: 0.5rem 0;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #0066cc;
+    font-weight: bold;
+}
+
+.card a:hover {
+    color: #004499;
+}
+
+/* Estilos do formulário de contato */
+
+.form {
+    background-color: #ecf0f1;
+    padding: 2rem;
+    border-radius: 5px;
+    max-width: 600px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    background-color: #fff;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Mensagens de erro do formulário */
+
+.erro {
+    display: block;
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+    min-height: 1.2rem;
+}
+
+.input-erro {
+    border-color: #e74c3c !important;
+    background-color: #fadbd8;
+}
+
+/* Botão de envio do formulário */
+
+.botao-enviar {
+    background-color: #3498db;
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+.botao-enviar:hover {
+    background-color: #2980b9;
+}
+
+.botao-enviar:active {
+    background-color: #1f618d;
+}
+
+/* Rodapé da página */
+
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.footer p {
+    margin: 0.5rem 0;
+}
+
+/* Design responsivo para dispositivos móveis */
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    /* Em telas pequenas, cards ocupam toda a largura */
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section h2 {
+        font-size: 1.5rem;
+    }
+
+    .section h3 {
+        font-size: 1.1rem;
+    }
+}
